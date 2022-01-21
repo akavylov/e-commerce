@@ -1,0 +1,18 @@
+.todos {
+    width: 600px;
+    margin: 30px auto 0;
+}
+
+.tod-row:nth-child(odd) {
+    background: rgb(230, 230, 230);
+}
+
+.todo-text {
+    max-width: 300px;
+    word-break: break-all;
+}
+
+.todos-copy {
+    width: 800px;
+    margin: 30px auto 0;
+}
