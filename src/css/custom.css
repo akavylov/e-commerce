@@ -1,18 +1,23 @@
-.todos {
-    width: 600px;
-    margin: 30px auto 0;
+.modal-bg {
+    background: rgba(0,0,0,0.7);
 }
 
-.tod-row:nth-child(odd) {
-    background: rgb(230, 230, 230);
+.modal-burger-enter {
+    opacity: 0;
+    transform: translateY(-100%);
 }
-
-.todo-text {
-    max-width: 300px;
-    word-break: break-all;
+.modal-burger-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 300ms;
 }
-
-.todos-copy {
-    width: 800px;
-    margin: 30px auto 0;
+.modal-burger-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+.modal-burger-exit-active {
+    opacity: 0;
+    transform: translateY(-100%);
+    /*transform: scale(0.9);*/
+    transition: 300ms;
 }

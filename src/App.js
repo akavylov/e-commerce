@@ -1,18 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Route, Routes} from "react-router-dom";
 import Main from "./pages/Main/Main";
 import Header from "./componants/Header/Header";
-import TodoProvider from "./Context/TodoContext";
-// import Copy from "./pages/Copy/Copy";
+import Box from "./pages/Box/Box";
+import {getRates} from "./redux/actions/productActions";
+import {useDispatch} from "react-redux";
+
 const App = () => {
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getRates())
+    }, [dispatch])
   return (
-      <TodoProvider>
+     <div>
           <Header/>
           <Routes>
                   <Route path="/" element={<Main/>} />
-                  {/*<Route path="/copy" element={<Copy/>} />*/}
+                  <Route path="/box" element={<Box/>} />
           </Routes>
-      </TodoProvider>
+     </div>
   );
 };
 
